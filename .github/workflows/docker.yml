@@ -1,8 +1,9 @@
 name: ci
 
 on: 
-  release:
-  type: [published]
+  push:
+     branches:
+       - master
 
 jobs:
   test:
