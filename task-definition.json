@@ -46,17 +46,17 @@
       "dockerLabels": null,
       "systemControls": null,
       "privileged": null,
-      "name": "cont1"
+      "name": "nginx"
     }
   ],
   "placementConstraints": [],
-  "memory": "100",
+  "memory": "200",
   "taskRoleArn": "arn:aws:iam::177469435568:role/ecsTaskExecutionRole",
   "compatibilities": [
     "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:177469435568:task-definition/task:5",
-  "family": "task",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:177469435568:task-definition/task-def:1",
+  "family": "task-def",
   "requiresAttributes": [
     {
       "targetId": null,
@@ -83,7 +83,7 @@
   ],
   "networkMode": null,
   "cpu": "200",
-  "revision": 5,
+  "revision": 1,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
