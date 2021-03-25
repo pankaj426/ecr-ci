@@ -1,6 +1,6 @@
 {
   "ipcMode": null,
-  "executionRoleArn": "arn:aws:iam::177469435568:role/ecsTaskExecutionRole",
+  "executionRoleArn": "arn:aws:iam::721791351551:role/ecsTaskExecutionRole",
   "containerDefinitions": [
     {
       "dnsSearchDomains": null,
@@ -26,10 +26,10 @@
       "secrets": null,
       "dockerSecurityOptions": null,
       "memory": null,
-      "memoryReservation": null,
+      "memoryReservation": 100,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "177469435568.dkr.ecr.us-east-1.amazonaws.com/github-actions:latest",
+      "image": "721791351551.dkr.ecr.us-east-1.amazonaws.com/ecs:latest",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -51,18 +51,24 @@
   ],
   "placementConstraints": [],
   "memory": "200",
-  "taskRoleArn": "arn:aws:iam::177469435568:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::721791351551:role/ecsTaskExecutionRole",
   "compatibilities": [
     "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:177469435568:task-definition/task-def:4",
-  "family": "task-def",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:721791351551:task-definition/task1:9",
+  "family": "task1",
   "requiresAttributes": [
     {
       "targetId": null,
       "targetType": null,
       "value": null,
       "name": "com.amazonaws.ecs.capability.ecr-auth"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
     },
     {
       "targetId": null,
@@ -83,7 +89,7 @@
   ],
   "networkMode": null,
   "cpu": "200",
-  "revision": 4,
+  "revision": 9,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,

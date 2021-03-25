@@ -30,7 +30,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: github-actions
+        ECR_REPOSITORY: ecr
         IMAGE_TAG: latest
       run: |
         # Build a docker container and
@@ -51,6 +51,6 @@ jobs:
       uses: aws-actions/amazon-ecs-deploy-task-definition@v1
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
-        service: service2
-        cluster: pankaj
+        service: service1
+        cluster: pk1
         wait-for-service-stability: true
